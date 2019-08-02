@@ -13,6 +13,7 @@ def test_hosts_file(host):
     assert f.user == 'root'
     assert f.group == 'root'
 
-def test_lynis_installed(host)
+
+def test_lynis_installed(host):
     pkg = host.package("lynis")
     assert pkg.is_installed
