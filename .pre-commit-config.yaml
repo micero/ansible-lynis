@@ -1,0 +1,12 @@
+---
+# Update the sha variable with the release version that you want, from the yamllint repo
+- repo: https://github.com/adrienverge/yamllint.git
+  rev: v1.16.0
+  hooks:
+    - id: yamllint
+- repo: https://github.com/Yelp/detect-secrets.git
+  rev: v0.12.4
+  hooks:
+    - id: detect-secrets
+      args: ['--baseline', '.secrets.baseline']
+      exclude: .*/tests/.*
